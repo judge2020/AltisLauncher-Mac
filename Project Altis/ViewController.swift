@@ -9,11 +9,15 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    
+    @IBOutlet weak var _StatusField: NSTextField!
+    @IBOutlet weak var _UsermameField: NSTextField!
+    @IBOutlet weak var _PasswordField: NSSecureTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override var representedObject: Any? {
@@ -22,6 +26,9 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func PlayPress(_ sender: Any) {
+        
+    }
 
 }
 
