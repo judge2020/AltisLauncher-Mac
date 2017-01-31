@@ -1,0 +1,8 @@
+language: objective-c
+osx_image: xcode8.2
+xcode_workspace: Project Altis.xcworkspace
+xcode_sheme: Project Altis
+before_install:
+  - pod install
+
+

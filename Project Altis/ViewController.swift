@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Foundation
 
 class ViewController: NSViewController {
     
