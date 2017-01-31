@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80FAA7EC1E4129C800AFD12F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAA7EB1E4129C800AFD12F /* AppDelegate.swift */; };
+		80FAA7EE1E4129C800AFD12F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAA7ED1E4129C800AFD12F /* ViewController.swift */; };
+		80FAA7F11E4129C800AFD12F /* Project_Altis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80FAA7EF1E4129C800AFD12F /* Project_Altis.xcdatamodeld */; };
+		80FAA7F31E4129C800AFD12F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FAA7F21E4129C800AFD12F /* Assets.xcassets */; };
+		80FAA7F61E4129C800AFD12F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80FAA7F41E4129C800AFD12F /* Main.storyboard */; };
+		80FAA8011E4129C800AFD12F /* Project_AltisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAA8001E4129C800AFD12F /* Project_AltisTests.swift */; };
+		80FAA80C1E4129C800AFD12F /* Project_AltisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAA80B1E4129C800AFD12F /* Project_AltisUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80FAA7FD1E4129C800AFD12F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FAA7E01E4129C700AFD12F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80FAA7E71E4129C700AFD12F;
+			remoteInfo = "Project Altis";
+		};
+		80FAA8081E4129C800AFD12F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FAA7E01E4129C700AFD12F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80FAA7E71E4129C700AFD12F;
+			remoteInfo = "Project Altis";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80FAA7E81E4129C800AFD12F /* Project Altis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Altis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FAA7EB1E4129C800AFD12F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80FAA7ED1E4129C800AFD12F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80FAA7F01E4129C800AFD12F /* Project_Altis.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project_Altis.xcdatamodel; sourceTree = "<group>"; };
+		80FAA7F21E4129C800AFD12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80FAA7F51E4129C800AFD12F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80FAA7F71E4129C800AFD12F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80FAA7FC1E4129C800AFD12F /* Project AltisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project AltisTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FAA8001E4129C800AFD12F /* Project_AltisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_AltisTests.swift; sourceTree = "<group>"; };
+		80FAA8021E4129C800AFD12F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80FAA8071E4129C800AFD12F /* Project AltisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project AltisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FAA80B1E4129C800AFD12F /* Project_AltisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_AltisUITests.swift; sourceTree = "<group>"; };
+		80FAA80D1E4129C800AFD12F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80FAA7E51E4129C700AFD12F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FAA7F91E4129C800AFD12F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FAA8041E4129C800AFD12F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80FAA7DF1E4129C700AFD12F = {
+			isa = PBXGroup;
+			children = (
+				80FAA7EA1E4129C800AFD12F /* Project Altis */,
+				80FAA7FF1E4129C800AFD12F /* Project AltisTests */,
+				80FAA80A1E4129C800AFD12F /* Project AltisUITests */,
+				80FAA7E91E4129C800AFD12F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80FAA7E91E4129C800AFD12F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80FAA7E81E4129C800AFD12F /* Project Altis.app */,
+				80FAA7FC1E4129C800AFD12F /* Project AltisTests.xctest */,
+				80FAA8071E4129C800AFD12F /* Project AltisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80FAA7EA1E4129C800AFD12F /* Project Altis */ = {
+			isa = PBXGroup;
+			children = (
+				80FAA7EB1E4129C800AFD12F /* AppDelegate.swift */,
+				80FAA7ED1E4129C800AFD12F /* ViewController.swift */,
+				80FAA7F21E4129C800AFD12F /* Assets.xcassets */,
+				80FAA7F41E4129C800AFD12F /* Main.storyboard */,
+				80FAA7F71E4129C800AFD12F /* Info.plist */,
+				80FAA7EF1E4129C800AFD12F /* Project_Altis.xcdatamodeld */,
+			);
+			path = "Project Altis";
+			sourceTree = "<group>";
+		};
+		80FAA7FF1E4129C800AFD12F /* Project AltisTests */ = {
+			isa = PBXGroup;
+			children = (
+				80FAA8001E4129C800AFD12F /* Project_AltisTests.swift */,
+				80FAA8021E4129C800AFD12F /* Info.plist */,
+			);
+			path = "Project AltisTests";
+			sourceTree = "<group>";
+		};
+		80FAA80A1E4129C800AFD12F /* Project AltisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				80FAA80B1E4129C800AFD12F /* Project_AltisUITests.swift */,
+				80FAA80D1E4129C800AFD12F /* Info.plist */,
+			);
+			path = "Project AltisUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80FAA7E71E4129C700AFD12F /* Project Altis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80FAA8101E4129C800AFD12F /* Build configuration list for PBXNativeTarget "Project Altis" */;
+			buildPhases = (
+				80FAA7E41E4129C700AFD12F /* Sources */,
+				80FAA7E51E4129C700AFD12F /* Frameworks */,
+				80FAA7E61E4129C700AFD12F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Project Altis";
+			productName = "Project Altis";
+			productReference = 80FAA7E81E4129C800AFD12F /* Project Altis.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80FAA7FB1E4129C800AFD12F /* Project AltisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80FAA8131E4129C800AFD12F /* Build configuration list for PBXNativeTarget "Project AltisTests" */;
+			buildPhases = (
+				80FAA7F81E4129C800AFD12F /* Sources */,
+				80FAA7F91E4129C800AFD12F /* Frameworks */,
+				80FAA7FA1E4129C800AFD12F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80FAA7FE1E4129C800AFD12F /* PBXTargetDependency */,
+			);
+			name = "Project AltisTests";
+			productName = "Project AltisTests";
+			productReference = 80FAA7FC1E4129C800AFD12F /* Project AltisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		80FAA8061E4129C800AFD12F /* Project AltisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80FAA8161E4129C800AFD12F /* Build configuration list for PBXNativeTarget "Project AltisUITests" */;
+			buildPhases = (
+				80FAA8031E4129C800AFD12F /* Sources */,
+				80FAA8041E4129C800AFD12F /* Frameworks */,
+				80FAA8051E4129C800AFD12F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80FAA8091E4129C800AFD12F /* PBXTargetDependency */,
+			);
+			name = "Project AltisUITests";
+			productName = "Project AltisUITests";
+			productReference = 80FAA8071E4129C800AFD12F /* Project AltisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80FAA7E01E4129C700AFD12F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Judge2020;
+				TargetAttributes = {
+					80FAA7E71E4129C700AFD12F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = AHMQSX5S6N;
+						ProvisioningStyle = Automatic;
+					};
+					80FAA7FB1E4129C800AFD12F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = AHMQSX5S6N;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 80FAA7E71E4129C700AFD12F;
+					};
+					80FAA8061E4129C800AFD12F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = AHMQSX5S6N;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 80FAA7E71E4129C700AFD12F;
+					};
+				};
+			};
+			buildConfigurationList = 80FAA7E31E4129C700AFD12F /* Build configuration list for PBXProject "Project Altis" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80FAA7DF1E4129C700AFD12F;
+			productRefGroup = 80FAA7E91E4129C800AFD12F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80FAA7E71E4129C700AFD12F /* Project Altis */,
+				80FAA7FB1E4129C800AFD12F /* Project AltisTests */,
+				80FAA8061E4129C800AFD12F /* Project AltisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80FAA7E61E4129C700AFD12F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FAA7F31E4129C800AFD12F /* Assets.xcassets in Resources */,
+				80FAA7F61E4129C800AFD12F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FAA7FA1E4129C800AFD12F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FAA8051E4129C800AFD12F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80FAA7E41E4129C700AFD12F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FAA7F11E4129C800AFD12F /* Project_Altis.xcdatamodeld in Sources */,
+				80FAA7EE1E4129C800AFD12F /* ViewController.swift in Sources */,
+				80FAA7EC1E4129C800AFD12F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FAA7F81E4129C800AFD12F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FAA8011E4129C800AFD12F /* Project_AltisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FAA8031E4129C800AFD12F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FAA80C1E4129C800AFD12F /* Project_AltisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80FAA7FE1E4129C800AFD12F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80FAA7E71E4129C700AFD12F /* Project Altis */;
+			targetProxy = 80FAA7FD1E4129C800AFD12F /* PBXContainerItemProxy */;
+		};
+		80FAA8091E4129C800AFD12F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80FAA7E71E4129C700AFD12F /* Project Altis */;
+			targetProxy = 80FAA8081E4129C800AFD12F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80FAA7F41E4129C800AFD12F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80FAA7F51E4129C800AFD12F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80FAA80E1E4129C800AFD12F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80FAA80F1E4129C800AFD12F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		80FAA8111E4129C800AFD12F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AHMQSX5S6N;
+				INFOPLIST_FILE = "Project Altis/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hunter.Project-Altis";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		80FAA8121E4129C800AFD12F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AHMQSX5S6N;
+				INFOPLIST_FILE = "Project Altis/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hunter.Project-Altis";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		80FAA8141E4129C800AFD12F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AHMQSX5S6N;
+				INFOPLIST_FILE = "Project AltisTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hunter.Project-AltisTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Project Altis.app/Contents/MacOS/Project Altis";
+			};
+			name = Debug;
+		};
+		80FAA8151E4129C800AFD12F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AHMQSX5S6N;
+				INFOPLIST_FILE = "Project AltisTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hunter.Project-AltisTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Project Altis.app/Contents/MacOS/Project Altis";
+			};
+			name = Release;
+		};
+		80FAA8171E4129C800AFD12F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AHMQSX5S6N;
+				INFOPLIST_FILE = "Project AltisUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hunter.Project-AltisUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Project Altis";
+			};
+			name = Debug;
+		};
+		80FAA8181E4129C800AFD12F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AHMQSX5S6N;
+				INFOPLIST_FILE = "Project AltisUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hunter.Project-AltisUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Project Altis";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80FAA7E31E4129C700AFD12F /* Build configuration list for PBXProject "Project Altis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80FAA80E1E4129C800AFD12F /* Debug */,
+				80FAA80F1E4129C800AFD12F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80FAA8101E4129C800AFD12F /* Build configuration list for PBXNativeTarget "Project Altis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80FAA8111E4129C800AFD12F /* Debug */,
+				80FAA8121E4129C800AFD12F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		80FAA8131E4129C800AFD12F /* Build configuration list for PBXNativeTarget "Project AltisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80FAA8141E4129C800AFD12F /* Debug */,
+				80FAA8151E4129C800AFD12F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		80FAA8161E4129C800AFD12F /* Build configuration list for PBXNativeTarget "Project AltisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80FAA8171E4129C800AFD12F /* Debug */,
+				80FAA8181E4129C800AFD12F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		80FAA7EF1E4129C800AFD12F /* Project_Altis.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				80FAA7F01E4129C800AFD12F /* Project_Altis.xcdatamodel */,
+			);
+			currentVersion = 80FAA7F01E4129C800AFD12F /* Project_Altis.xcdatamodel */;
+			path = Project_Altis.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 80FAA7E01E4129C700AFD12F /* Project object */;
+}
