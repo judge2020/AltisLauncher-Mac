@@ -5,4 +5,5 @@ xcode_sheme: Project Altis
 before_install:
   - pod install
 
- 
+script:
+  = xcodebuild -workspace "Project Altis.xcworkspace" -scheme "Project Altis" -sdk macosx clean build archive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
