@@ -12,11 +12,11 @@
 		80E8AC661E41379D00DD2D97 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8AC631E41368C00DD2D97 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80E8AC681E4137B900DD2D97 /* Pods_Project_Altis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4CAFB66930A637AFBD5EEA /* Pods_Project_Altis.framework */; };
 		80E8AC691E4137B900DD2D97 /* Pods_Project_Altis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4CAFB66930A637AFBD5EEA /* Pods_Project_Altis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80EA82841E42472F00307851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EA82821E42472F00307851 /* Main.storyboard */; };
 		80FAA7EC1E4129C800AFD12F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAA7EB1E4129C800AFD12F /* AppDelegate.swift */; };
 		80FAA7EE1E4129C800AFD12F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAA7ED1E4129C800AFD12F /* ViewController.swift */; };
 		80FAA7F11E4129C800AFD12F /* Project_Altis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80FAA7EF1E4129C800AFD12F /* Project_Altis.xcdatamodeld */; };
 		80FAA7F31E4129C800AFD12F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FAA7F21E4129C800AFD12F /* Assets.xcassets */; };
-		80FAA7F61E4129C800AFD12F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80FAA7F41E4129C800AFD12F /* Main.storyboard */; };
 		80FAA8011E4129C800AFD12F /* Project_AltisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAA8001E4129C800AFD12F /* Project_AltisTests.swift */; };
 		80FAA80C1E4129C800AFD12F /* Project_AltisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAA80B1E4129C800AFD12F /* Project_AltisUITests.swift */; };
 		D6E2F0D5CE474DAAAF794227 /* Pods_Project_Altis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4CAFB66930A637AFBD5EEA /* Pods_Project_Altis.framework */; };
@@ -58,12 +58,12 @@
 		472A5A379C1BFCCB5D024A3D /* Pods-Project Altis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Altis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project Altis/Pods-Project Altis.release.xcconfig"; sourceTree = "<group>"; };
 		78D4A1E7D7812B125B13DC18 /* Pods-Project Altis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Altis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Altis/Pods-Project Altis.debug.xcconfig"; sourceTree = "<group>"; };
 		80E8AC631E41368C00DD2D97 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Project_Altis-hgkfnoxjszlbgbcsyvtfiffbixaq/Build/Products/Debug/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		80EA82831E42472F00307851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80FAA7E81E4129C800AFD12F /* Project Altis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Altis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FAA7EB1E4129C800AFD12F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80FAA7ED1E4129C800AFD12F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		80FAA7F01E4129C800AFD12F /* Project_Altis.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project_Altis.xcdatamodel; sourceTree = "<group>"; };
 		80FAA7F21E4129C800AFD12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		80FAA7F51E4129C800AFD12F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80FAA7F71E4129C800AFD12F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80FAA7FC1E4129C800AFD12F /* Project AltisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project AltisTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FAA8001E4129C800AFD12F /* Project_AltisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_AltisTests.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				80FAA7EB1E4129C800AFD12F /* AppDelegate.swift */,
 				80FAA7ED1E4129C800AFD12F /* ViewController.swift */,
 				80FAA7F21E4129C800AFD12F /* Assets.xcassets */,
-				80FAA7F41E4129C800AFD12F /* Main.storyboard */,
+				80EA82821E42472F00307851 /* Main.storyboard */,
 				80FAA7F71E4129C800AFD12F /* Info.plist */,
 				80FAA7EF1E4129C800AFD12F /* Project_Altis.xcdatamodeld */,
 			);
@@ -289,7 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80FAA7F31E4129C800AFD12F /* Assets.xcassets in Resources */,
-				80FAA7F61E4129C800AFD12F /* Main.storyboard in Resources */,
+				80EA82841E42472F00307851 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,10 +400,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		80FAA7F41E4129C800AFD12F /* Main.storyboard */ = {
+		80EA82821E42472F00307851 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				80FAA7F51E4129C800AFD12F /* Base */,
+				80EA82831E42472F00307851 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

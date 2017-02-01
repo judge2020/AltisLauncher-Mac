@@ -30,9 +30,15 @@ class ViewController: NSViewController {
     }
 
     @IBAction func PlayPress(_ sender: Any) {
-        let data = NSData(contentsOf: URL(string: "https://projectaltis.com/api/manifest")!)
-        var manifest = try? JSONSerialization.jsonObject(with: data! as Data, options: JSONSerialization.ReadingOptions.mutableContainers)
-        var df = try? JSONSerialization.jsonObject(with: data! as Data, options: JSONSerialization.ReadingOptions.allowFragments)
+        var raw = ""
+        Alamofire.request("https://projectaltis.com/api/manifest").responseString{response in
+            print(response.response)
+            print("f\n\n")
+            print(response.result.value)
+            raw = response.result.value!
+        }
+        var fileArray = raw.components(separatedBy: "#")
+        print(fileArray[0])
     }
     
     func launchTT(username: String, password: String){

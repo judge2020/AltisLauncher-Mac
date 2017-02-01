@@ -67,11 +67,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Project_Altis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="297"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="117"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb9-XV-CJ3">
-                                <rect key="frame" x="129" y="273" width="222" height="17"/>
+                                <rect key="frame" x="129" y="93" width="222" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Project Altis Mac Launcher (ALPHA)" id="GEw-gC-1aI">
                                     <font key="font" metaFont="system"/>
@@ -80,7 +80,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoc-5C-fjC">
-                                <rect key="frame" x="19" y="246" width="70" height="17"/>
+                                <rect key="frame" x="19" y="66" width="70" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Username:" id="i6W-FO-hhW">
                                     <font key="font" metaFont="system"/>
@@ -89,7 +89,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEf-SK-RoM">
-                                <rect key="frame" x="19" y="221" width="66" height="17"/>
+                                <rect key="frame" x="19" y="41" width="66" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password:" id="Wk9-ux-1mK">
                                     <font key="font" metaFont="system"/>
@@ -98,7 +98,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR2-5r-z8c">
-                                <rect key="frame" x="95" y="243" width="364" height="22"/>
+                                <rect key="frame" x="95" y="63" width="364" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="L4u-YO-roR">
                                     <font key="font" metaFont="system"/>
@@ -107,7 +107,7 @@
                                 </textFieldCell>
                             </textField>
                             <secureTextField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KG8-Aw-Dup">
-                                <rect key="frame" x="95" y="216" width="364" height="22"/>
+                                <rect key="frame" x="95" y="36" width="364" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="LUr-Lp-jR0">
                                     <font key="font" metaFont="system"/>
@@ -119,7 +119,7 @@
                                 </secureTextFieldCell>
                             </secureTextField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YM2-YR-tXZ">
-                                <rect key="frame" x="207" y="180" width="66" height="32"/>
+                                <rect key="frame" x="207" y="0.0" width="66" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Play" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w4T-Bj-JnF">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -129,27 +129,17 @@
                                     <action selector="PlayPress:" target="XfG-lQ-9wD" id="YuA-Wd-Fqe"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJM-Lj-Ahi">
-                                <rect key="frame" x="31" y="11" width="431" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Label" id="1Qr-lq-988">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="_PasswordField" destination="KG8-Aw-Dup" id="DIh-n0-WHA"/>
                         <outlet property="_StatusField" destination="eb9-XV-CJ3" id="iOo-jv-Uzw"/>
                         <outlet property="_UsermameField" destination="IR2-5r-z8c" id="YDw-2y-AZY"/>
-                        <outlet property="infofield" destination="KJM-Lj-Ahi" id="WB2-DT-JQ3"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="632.5"/>
+            <point key="canvasLocation" x="169" y="542.5"/>
         </scene>
     </scenes>
 </document>
