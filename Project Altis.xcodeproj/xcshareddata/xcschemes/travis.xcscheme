@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "91DBD481EE51ADB8B896C123AC86439D"
+               BlueprintIdentifier = "D7A7F1DB32E2B1935BC42E468F4480A1"
                BuildableName = "Pods_Project_Altis.framework"
                BlueprintName = "Pods-Project Altis"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9F93B43EF54AFE1CBA781A8908D57AFB"
+               BlueprintIdentifier = "93662E20F3188C8A2B20DCD6C15F085B"
                BuildableName = "SwiftyJSON.framework"
                BlueprintName = "SwiftyJSON"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -87,7 +87,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      debugAsWhichUser = "root"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"

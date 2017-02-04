@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		80E8AC641E41368C00DD2D97 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8AC631E41368C00DD2D97 /* Alamofire.framework */; };
-		80E8AC651E41379D00DD2D97 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8AC631E41368C00DD2D97 /* Alamofire.framework */; };
-		80E8AC661E41379D00DD2D97 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8AC631E41368C00DD2D97 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80E8AC681E4137B900DD2D97 /* Pods_Project_Altis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4CAFB66930A637AFBD5EEA /* Pods_Project_Altis.framework */; };
 		80E8AC691E4137B900DD2D97 /* Pods_Project_Altis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4CAFB66930A637AFBD5EEA /* Pods_Project_Altis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80EA82841E42472F00307851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EA82821E42472F00307851 /* Main.storyboard */; };
@@ -47,7 +45,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				80E8AC691E4137B900DD2D97 /* Pods_Project_Altis.framework in Embed Frameworks */,
-				80E8AC661E41379D00DD2D97 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,7 +79,6 @@
 			files = (
 				80E8AC681E4137B900DD2D97 /* Pods_Project_Altis.framework in Frameworks */,
 				80E8AC641E41368C00DD2D97 /* Alamofire.framework in Frameworks */,
-				80E8AC651E41379D00DD2D97 /* Alamofire.framework in Frameworks */,
 				D6E2F0D5CE474DAAAF794227 /* Pods_Project_Altis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

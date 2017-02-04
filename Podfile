@@ -7,4 +7,5 @@ target 'Project Altis' do
 
   pod 'Alamofire', '~> 4.3'
   pod 'SwiftyJSON'
+  pod 'CryptoSwift'
 end

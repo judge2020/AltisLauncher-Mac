@@ -10,6 +10,7 @@ import Cocoa
 import Foundation
 import Alamofire
 import SwiftyJSON
+import CryptoSwift
 
 class ViewController: NSViewController {
     
@@ -23,14 +24,20 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startup()
+        
+    }
+    
+    func startup(){
         dataPath = documentsDirectory.appendingPathComponent("TTPA")
         
         do {
             try FileManager.default.createDirectory(atPath: (dataPath?.path)!, withIntermediateDirectories: true, attributes: nil)
+            try FileManager.default.createDirectory(atPath: (dataPath?.appendingPathComponent("config", isDirectory: true))!.path, withIntermediateDirectories: true, attributes: nil)
+            try FileManager.default.createDirectory(atPath: (dataPath?.appendingPathComponent("resources/default", isDirectory: true))!.path, withIntermediateDirectories: true, attributes: nil)
         } catch let error as NSError {
             print("Error creating directory: \(error.localizedDescription)")
         }
-        
     }
 
     override var representedObject: Any? {
@@ -40,51 +47,68 @@ class ViewController: NSViewController {
     }
 
     @IBAction func PlayPress(_ sender: Any) {
+        _StatusField.stringValue = "Checking for updates..."
         Alamofire.request("https://projectaltis.com/api/manifest").responseString{response in
-            var raw = response.result.value! as String
-            raw = "{" + raw + "}"
+            let raw = response.result.value! as String
             let array = raw.components(separatedBy: "#")
             
             //handle update
-            for root in array{
-                let json = JSON(data: root.data(using: .utf8)!)
-                let filename = json["filename"].stringValue
-                if (filename.isEmpty) {return}
-                let filepath = (self.dataPath?.appendingPathComponent(filename).path)!
-                if (!FileManager.default.fileExists(atPath: filepath)){
-                    print("fff" + filename)
-                }
-                else{
-                    print("ddd" + filename)
-                } 
-            }
+            self.handleUpdate(array: array)
             
+            self.launchTT(username: self._UsermameField.stringValue, password: self._PasswordField.stringValue)
+        }
+    }
+    @IBAction func RedownloadPress(_ sender: Any) {
+        try? FileManager.default.removeItem(at: dataPath!)
+        
+        startup()
+        
+        _StatusField.stringValue = "Redownloading..."
+        Alamofire.request("https://projectaltis.com/api/manifest").responseString{response in
+            let raw = response.result.value! as String
+            let array = raw.components(separatedBy: "#")
             
+            //handle update
+            self.handleUpdate(array: array)
         }
     }
     
-    func sha256(_ data: Data) -> Data? {
-        guard let res = NSMutableData(length: Int(CC_SHA256_DIGEST_LENGTH)) else { return nil }
-        CC_SHA256((data as NSData).bytes, CC_LONG(data.count), res.mutableBytes.assumingMemoryBound(to: UInt8.self))
-        return res as Data
-    }
-    
-    func sha256s(_ str: String) -> String? {
-        guard
-            let data = str.data(using: String.Encoding.utf8),
-            let shaData = sha256(data)
-            else { return nil }
-        let rc = shaData.base64EncodedString(options: [])
-        return rc
+    func handleUpdate(array: [String]){
+        for root in array{
+            let json = JSON(data: root.data(using: .utf8)!)
+            var filename = json["filename"].stringValue
+            if (filename.isEmpty) {return}
+            
+            if (filename =~ "phase_.+\\.mf"){
+                filename = "resources/default/" + filename
+            }
+            if (filename == "toon.dc"){
+                filename = "config/" + filename
+            }
+            
+            let filepath = (self.dataPath?.appendingPathComponent(filename))!
+            if (!FileManager.default.fileExists(atPath: filepath.path)){
+                print("Missing: " + filename)
+                _StatusField.stringValue = "Downloading files..."
+                Downloader.load(url: try! json["url"].stringValue.asURL(), to: filepath, completion: ({}))
+            }
+            else{
+                print("Found: " + filename)
+            }
+        }
     }
     
 
     
     func launchTT(username: String, password: String){
+        self._StatusField.stringValue = "Note: Do NOT report bugs for this to the TTPA team!"
+        self._UsermameField.stringValue = "NOTE: expect extreme performance issues."
+        self._PasswordField.stringValue = ""
         setEnvironmentVar(name: "TT_USERNAME", value: username, overwrite: true)
         setEnvironmentVar(name: "TT_PASSWORD", value: password, overwrite: true)
         setEnvironmentVar(name: "TT_GAMESERVER", value: "gs1.projectaltis.com", overwrite: true)
-        shell("Applications/Wine\\ Staging.app/Contents/MacOS/wine", (dataPath?.path)! + "ProjectAltis.exe")
+        //shell("/Applications/Wine\\ Staging.app/Contents/MacOS/wine", (dataPath?.path)! + "/ProjectAltis.exe")
+        Process.launchedProcess(launchPath: "/Applications/Wine Staging.app/Contents/MacOS/wine", arguments: [(dataPath?.path)! + "/ProjectAltis.exe"])
     }
     
     func setEnvironmentVar(name: String, value: String, overwrite: Bool) {
@@ -103,22 +127,50 @@ class ViewController: NSViewController {
 
 }
 
-
-extension String {
-    
-    func split(regex pattern: String) -> [String] {
+class Downloader {
+    class func load(url: URL, to localUrl: URL, completion: @escaping () -> ()) {
+        let sessionConfig = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfig)
+        let request = try! URLRequest(url: url, method: .get)
         
-        guard let re = try? NSRegularExpression(pattern: pattern, options: [])
-            else { return [] }
-        
-        let nsString = self as NSString // needed for range compatibility
-        let stop = "<SomeStringThatYouDoNotExpectToOccurInSelf>"
-        let modifiedString = re.stringByReplacingMatches(
-            in: self,
-            options: [],
-            range: NSRange(location: 0, length: nsString.length),
-            withTemplate: stop)
-        return modifiedString.components(separatedBy: stop)
+        let task = session.downloadTask(with: request) { (tempLocalUrl, response, error) in
+            if let tempLocalUrl = tempLocalUrl, error == nil {
+                // Success
+                if let statusCode = (response as? HTTPURLResponse)?.statusCode {
+                    print("Success: \(statusCode)")
+                }
+                
+                do {
+                    try FileManager.default.copyItem(at: tempLocalUrl, to: localUrl)
+                    completion()
+                } catch (let writeError) {
+                    print("error writing file \(localUrl) : \(writeError)")
+                }
+                
+            } else {
+                print("Failure: %@", error?.localizedDescription as Any);
+            }
+        }
+        task.resume()
     }
 }
 
+class Regex {
+    let internalExpression: NSRegularExpression
+    let pattern: String
+    
+    init(_ pattern: String) {
+        self.pattern = pattern
+        self.internalExpression = try! NSRegularExpression(pattern: pattern, options: [])
+    }
+    
+    func test(input: String) -> Bool {
+        let matches = self.internalExpression.matches(in: input, options: [], range:NSRange(location: 0, length: input.characters.count))
+        return matches.count > 0
+    }
+}
+
+infix operator =~
+func =~ (input: String, pattern: String) -> Bool {
+    return Regex(pattern).test(input: input)
+}

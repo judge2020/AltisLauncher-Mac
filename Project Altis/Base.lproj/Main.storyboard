@@ -71,9 +71,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb9-XV-CJ3">
-                                <rect key="frame" x="129" y="93" width="222" height="17"/>
+                                <rect key="frame" x="-2" y="93" width="484" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Project Altis Mac Launcher (ALPHA)" id="GEw-gC-1aI">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Project Altis Mac Launcher (ALPHA)" id="GEw-gC-1aI">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -127,6 +127,17 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="PlayPress:" target="XfG-lQ-9wD" id="YuA-Wd-Fqe"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s6V-me-bdC">
+                                <rect key="frame" x="350" y="8" width="110" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="Redownload files" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VUc-GM-Eqa">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="RedownloadPress:" target="XfG-lQ-9wD" id="KvR-lZ-QqS"/>
                                 </connections>
                             </button>
                         </subviews>
