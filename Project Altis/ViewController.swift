@@ -56,7 +56,7 @@ class ViewController: NSViewController {
                 }
                 else{
                     print("ddd" + filename)
-                }
+                } 
             }
             
             
