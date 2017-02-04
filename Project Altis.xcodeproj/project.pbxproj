@@ -57,6 +57,7 @@
 /* Begin PBXFileReference section */
 		472A5A379C1BFCCB5D024A3D /* Pods-Project Altis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Altis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project Altis/Pods-Project Altis.release.xcconfig"; sourceTree = "<group>"; };
 		78D4A1E7D7812B125B13DC18 /* Pods-Project Altis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Altis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Altis/Pods-Project Altis.debug.xcconfig"; sourceTree = "<group>"; };
+		80C7FABA1E45A0F10006CD61 /* Project Altis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Project Altis-Bridging-Header.h"; sourceTree = "<group>"; };
 		80E8AC631E41368C00DD2D97 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Project_Altis-hgkfnoxjszlbgbcsyvtfiffbixaq/Build/Products/Debug/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		80EA82831E42472F00307851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80FAA7E81E4129C800AFD12F /* Project Altis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Altis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +135,7 @@
 				80EA82821E42472F00307851 /* Main.storyboard */,
 				80FAA7F71E4129C800AFD12F /* Info.plist */,
 				80FAA7EF1E4129C800AFD12F /* Project_Altis.xcdatamodeld */,
+				80C7FABA1E45A0F10006CD61 /* Project Altis-Bridging-Header.h */,
 			);
 			path = "Project Altis";
 			sourceTree = "<group>";
@@ -247,6 +249,7 @@
 					80FAA7E71E4129C700AFD12F = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = AHMQSX5S6N;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					80FAA7FB1E4129C800AFD12F = {
@@ -506,6 +509,7 @@
 			baseConfigurationReference = 78D4A1E7D7812B125B13DC18 /* Pods-Project Altis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AHMQSX5S6N;
@@ -514,6 +518,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hunter.Project-Altis";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Project Altis/Project Altis-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -523,6 +529,7 @@
 			baseConfigurationReference = 472A5A379C1BFCCB5D024A3D /* Pods-Project Altis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AHMQSX5S6N;
@@ -531,6 +538,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hunter.Project-Altis";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Project Altis/Project Altis-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

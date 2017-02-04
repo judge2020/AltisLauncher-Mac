@@ -6,4 +6,5 @@ target 'Project Altis' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.3'
+  pod 'SwiftyJSON'
 end
