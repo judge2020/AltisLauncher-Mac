@@ -43,7 +43,7 @@ class ViewController: NSViewController {
         Alamofire.request("https://projectaltis.com/api/manifest").responseString{response in
             var raw = response.result.value! as String
             raw = "{" + raw + "}"
-            var array = raw.components(separatedBy: "#")
+            let array = raw.components(separatedBy: "#")
             
             //handle update
             for root in array{
