@@ -12,8 +12,9 @@ import Alamofire
 import SwiftyJSON
 import CryptoSwift
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTextFieldDelegate {
     
+    @IBOutlet weak var _GameVersionField: NSTextField!
     @IBOutlet weak var _StatusField: NSTextField!
     @IBOutlet weak var _UsermameField: NSTextField!
     @IBOutlet weak var _PasswordField: NSSecureTextField!
@@ -27,20 +28,46 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //try to create directories
         startup()
         
     }
     
+    @IBAction func _PasswordFieldEnter(_ sender: Any) {
+        if (!_PasswordField.stringValue.isEmpty && !_UsermameField.stringValue.isEmpty){
+            PlayPress("")
+        }
+    }
+    
+    
     func startup(){
         dataPath = documentsDirectory.appendingPathComponent("TTPA")
         
+        //create folders (if they don't exist)
         do {
             try FileManager.default.createDirectory(atPath: (dataPath?.path)!, withIntermediateDirectories: true, attributes: nil)
             try FileManager.default.createDirectory(atPath: (dataPath?.appendingPathComponent("config", isDirectory: true))!.path, withIntermediateDirectories: true, attributes: nil)
             try FileManager.default.createDirectory(atPath: (dataPath?.appendingPathComponent("resources/default", isDirectory: true))!.path, withIntermediateDirectories: true, attributes: nil)
         } catch let error as NSError {
             print("Error creating directory: \(error.localizedDescription)")
+        } catch {
+            print("other error")
         }
+
+        //get game version
+        Alamofire.request("http://gs1.projectaltis.com/API/Version").responseString{response in
+            let raw = response.result.value! as String
+            print("Game version: " + raw)
+            self._GameVersionField.stringValue = "Game version: " + raw
+        }
+        
+        //set usernamefield as first responder
+        self._UsermameField.becomeFirstResponder()
+        
+        //reset fields
+        self._UsermameField.stringValue = ""
+        self._PasswordField.stringValue = ""
+        self._StatusField.stringValue = "Unofficial Project Altis Mac Launcher (ALPHA)"
     }
 
     override var representedObject: Any? {
@@ -96,6 +123,7 @@ class ViewController: NSViewController {
             }
             else{
                 print("Found: " + filename)
+                
                 //filesize checking for updates
                 let filesize = (try? FileManager.default.attributesOfItem(atPath: filepath.path) as NSDictionary)?.fileSize()
                 if (String(describing: filesize!) != json["size"].string){
@@ -115,38 +143,25 @@ class ViewController: NSViewController {
 
     
     func launchTT(username: String, password: String){
-        //sendNotification(title: "Project ALtis", text: "Trying to open Toontown")
+        
+        //update readable values in UI. Unofficial launcher so don't want them to get questions regarding this.
         self._StatusField.stringValue = "Note: Do NOT report bugs for this to the TTPA team!"
         self._UsermameField.stringValue = "NOTE: expect extreme performance issues."
+        
+        //clear password field
         self._PasswordField.stringValue = ""
+        
+        //set environment variables, which is what's used to login and point to the correct gameserver.
         setEnvironmentVar(name: "TT_USERNAME", value: username, overwrite: true)
         setEnvironmentVar(name: "TT_PASSWORD", value: password, overwrite: true)
         setEnvironmentVar(name: "TT_GAMESERVER", value: "gs1.projectaltis.com", overwrite: true)
-        //shell("/Applications/Wine\\ Staging.app/Contents/MacOS/wine", (dataPath?.path)! + "/ProjectAltis.exe")
+        
+        //start wine.
         Process.launchedProcess(launchPath: "/Applications/Wine Staging.app/Contents/MacOS/wine", arguments: [(dataPath?.path)! + "/ProjectAltis.exe"])
     }
     
     func setEnvironmentVar(name: String, value: String, overwrite: Bool) {
         setenv(name, value, overwrite ? 1 : 0)
-    }
-    
-    func sendNotification(title: String, text: String){
-        let notification = NSUserNotification.init()
-        notification.title = title
-        notification.informativeText = text
-        notification.soundName = NSUserNotificationDefaultSoundName
-        notification.hasActionButton = false
-        NSUserNotificationCenter.default.deliver(notification)
-    }
-    
-    @discardableResult
-    func shell(_ args: String...) -> Int32 {
-        let task = Process()
-        task.launchPath = "/usr/bin/env"
-        task.arguments = args
-        task.launch()
-        task.waitUntilExit()
-        return task.terminationStatus
     }
     
     func downloadAlamo(path: URL, url: String){

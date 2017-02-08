@@ -117,6 +117,9 @@
                                         <string>NSAllRomanInputSourcesLocaleIdentifier</string>
                                     </allowedInputSourceLocales>
                                 </secureTextFieldCell>
+                                <connections>
+                                    <action selector="_PasswordFieldEnter:" target="XfG-lQ-9wD" id="HyG-Cu-8Xg"/>
+                                </connections>
                             </secureTextField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YM2-YR-tXZ">
                                 <rect key="frame" x="207" y="0.0" width="66" height="32"/>
@@ -140,9 +143,19 @@
                                     <action selector="RedownloadPress:" target="XfG-lQ-9wD" id="KvR-lZ-QqS"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3b7-9V-V1h">
+                                <rect key="frame" x="19" y="10" width="188" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Game Version: " id="FIb-im-OIW">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="_GameVersionField" destination="3b7-9V-V1h" id="y1e-k0-SRq"/>
                         <outlet property="_PasswordField" destination="KG8-Aw-Dup" id="DIh-n0-WHA"/>
                         <outlet property="_StatusField" destination="eb9-XV-CJ3" id="iOo-jv-Uzw"/>
                         <outlet property="_UsermameField" destination="IR2-5r-z8c" id="YDw-2y-AZY"/>
