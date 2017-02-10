@@ -41,6 +41,27 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     
     func startup(){
+        self.becomeFirstResponder()
+        let updateHandle = updateHandler()
+        if (!updateHandle.checkGithub()){
+            let Popup = NSAlert()
+            Popup.messageText = "New launcher Version!"
+            Popup.informativeText = "Go to the releases page now?"
+            Popup.alertStyle = .informational
+            Popup.addButton(withTitle: "Yes")
+            Popup.addButton(withTitle: "no")
+            let button = Popup.runModal()
+            if (button == NSAlertFirstButtonReturn){
+                if let checkURL = NSURL(string: "https://github.com/judge2020/AltisLauncher-Mac/releases/latest") {
+                    if NSWorkspace.shared().open(checkURL as URL) {
+                        print("URL Successfully Opened")
+                    }
+                } else {
+                    print("Invalid URL")
+                }
+            }
+        }
+        
         dataPath = documentsDirectory.appendingPathComponent("TTPA")
         
         //create folders (if they don't exist)
