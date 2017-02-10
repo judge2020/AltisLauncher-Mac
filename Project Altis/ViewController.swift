@@ -43,7 +43,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     func startup(){
         self.becomeFirstResponder()
         let updateHandle = updateHandler()
-        if (!updateHandle.checkGithub()){
+        if (updateHandle.checkGithub()){
             let Popup = NSAlert()
             Popup.messageText = "New launcher Version!"
             Popup.informativeText = "Go to the releases page now?"
@@ -56,7 +56,8 @@ class ViewController: NSViewController, NSTextFieldDelegate {
                     if NSWorkspace.shared().open(checkURL as URL) {
                         print("URL Successfully Opened")
                     }
-                } else {
+                }
+                else {
                     print("Invalid URL")
                 }
             }
